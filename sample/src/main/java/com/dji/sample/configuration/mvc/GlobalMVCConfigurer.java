@@ -34,6 +34,7 @@ public class GlobalMVCConfigurer implements WebMvcConfigurer {
         excludePaths.add("/swagger-ui/**");
         excludePaths.add("/v3/**");
         excludePaths.add("/ui/**");
+        excludePaths.add("/manage/**");
         // Intercept for all request interfaces.
         registry.addInterceptor(authInterceptor).addPathPatterns("/**").excludePathPatterns(excludePaths);
     }

@@ -8,6 +8,7 @@ import com.dji.sample.component.mqtt.model.MqttUseEnum;
 import com.dji.sdk.cloudapi.control.DrcModeMqttBroker;
 import lombok.Data;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,7 +39,7 @@ public class MqttPropertyConfiguration {
      * Get the configuration options of the basic link of the mqtt client.
      * @return
      */
-    static MqttClientOptions getBasicClientOptions() {
+    public static MqttClientOptions getBasicClientOptions() {
         if (!mqtt.containsKey(MqttUseEnum.BASIC)) {
             throw new Error("Please configure the basic mqtt connection parameters first, otherwise application cannot be started.");
         }
