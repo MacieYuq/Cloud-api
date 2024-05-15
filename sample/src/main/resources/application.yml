@@ -49,7 +49,7 @@ mqtt:
     port: 1883
     username: Francis
     password: admin
-    client-id: 123456
+    client-id: 199957
     # If the protocol is ws/wss, this value is required.
     path:
   DRC:
